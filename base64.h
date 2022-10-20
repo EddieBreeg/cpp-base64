@@ -48,7 +48,7 @@ public:
      * @return An iterator pointing to just after the end of the encoded data
     */
     template<class in_iter, class out_iter>
-    static out_iter encode(in_iter first, size_t n, out_iter output)
+    static inline out_iter encode(in_iter first, size_t n, out_iter output)
     {
         uint32_t buf;
         for(; n > 2; n -= 3){
@@ -91,7 +91,7 @@ public:
      * @return An iterator pointing to just after the end of the decoded data
     */
     template<class in_iter, class out_iter>
-    static out_iter decode(in_iter first, size_t n, out_iter out)
+    static inline out_iter decode(in_iter first, size_t n, out_iter out)
     {
         n &= ~3ULL;
         uint32_t buf;

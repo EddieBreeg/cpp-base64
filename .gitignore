@@ -1,0 +1,5 @@
+*
+!.gitignore
+!base64.h
+!encode.cpp
+!decode.cpp
